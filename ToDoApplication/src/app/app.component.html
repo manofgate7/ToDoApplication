@@ -1,0 +1,32 @@
+<h1>
+  {{title}}
+</h1>
+<button *ngIf="!isAdding" type="button" (click)="isAdding = true;">Add a new To-Do</button>
+<div *ngIf="isAdding">
+    New TO-DO: <input type="text" [(ngModel)]="newItem" /> <br/>
+  <button type="button" (click)="saveNewItem()" class="buttonGreen">Save</button>
+  <button type="button" (click)="cancelNew()" class="buttonRed">Cancel</button>
+</div>
+<br/>
+<hr/>
+<div *ngFor="let item of items" >
+  <div *ngIf="item.isEditing">
+      <input type="text"  class="left width50" [(ngModel)]="item.changedItem"/>
+      <div class="right width50">
+        <button type="button" (click)="saveItem(item)" class="buttonGreen">Save</button> <br />
+        <button type="button" (click)="changeItem(item, false)" class="buttonRed">Cancel</button>
+      </div>
+  </div>
+  <div *ngIf="!item.isEditing">
+      <div class="left width50">
+        {{item.ItemName}}
+      </div>
+      <div class="right width50">
+        <button type="button" (click)="changeItem(item, true)" class="buttonBlue">Edit</button> <br/>
+        <button type="button" (click)="complete(item.ItemID)" class="buttonBlue">Complete</button>
+      </div>
+      
+  </div>
+  <br class="clear"/>
+  <hr/>
+</div>

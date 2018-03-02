@@ -1,0 +1,52 @@
+/* You can add global styles to this file, and also import other style files */
+.left {
+	float: left;
+  }
+  .right {
+	float: right;
+  }
+
+  .width50 {
+	width:50%;
+  }
+.clear {
+	clear: both;
+}
+
+.buttonBlue {
+	padding-left: .75em;
+	padding-top: .25em;
+  	
+  	width: 6.5em;
+  	background: #64B5F6;
+	
+	-webkit-border-radius: 15px;
+  	-moz-border-radius: 15px;
+	  border-radius: 15px;
+	  margin-bottom: .5em;
+  }
+
+.buttonGreen {
+	padding-left: .75em;
+	padding-top: .25em;
+  	
+  	width: 6.5em;
+  	background: #81C784;
+	
+	-webkit-border-radius: 15px;
+  	-moz-border-radius: 15px;
+	  border-radius: 15px;
+	  margin-bottom: .5em;
+  }
+.buttonRed {
+	padding-left: .75em;
+	padding-top: .25em;
+  	
+  	width: 6.5em;
+  	background: #EF5350;
+	
+	-webkit-border-radius: 15px;
+  	-moz-border-radius: 15px;
+	  border-radius: 15px;
+	  margin-bottom: .5em;
+  }
